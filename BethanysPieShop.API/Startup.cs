@@ -24,7 +24,7 @@ namespace BethanysPieShop.API
         {
             services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseMySql(Configuration.GetConnectionString("localdb"));
+                options.UseSqlite(Configuration.GetConnectionString("localdb"));
             });
 
             services.AddMvc();
