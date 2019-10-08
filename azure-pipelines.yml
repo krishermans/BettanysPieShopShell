@@ -12,15 +12,16 @@ pool:
 variables:
   buildConfiguration: 'Release'
   runtime: 'win-x86'
+  targetFramework: 'netcoreapp2.0'
 
 steps:
-- script: dotnet build BethanysPieShop.API --runtime $(runtime) --configuration $(buildConfiguration)
+- script: dotnet build BethanysPieShop.API --runtime $(runtime) --configuration $(buildConfiguration) --framework $(targetFramework)
   displayName: 'dotnet build $(buildConfiguration)'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
     publishWebProjects: true
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory) --framework $(targetFramework) --runtime $(runtime)'
     zipAfterPublish: false
 
 # this code takes all the files in $(Build.ArtifactStagingDirectory) and uploads them as an artifact of your build.
