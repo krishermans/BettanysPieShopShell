@@ -11,7 +11,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  runtime: 'win-x86'
+  runtime: 'win7-x86'
   targetFramework: 'netcoreapp2.0'
 
 steps:
