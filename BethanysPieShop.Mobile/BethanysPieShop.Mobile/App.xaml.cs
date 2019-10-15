@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BethanysPieShop.Mobile.Core.Bootstrap;
+using BethanysPieShop.Mobile.Core.Contracts.Services.General;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,6 +11,20 @@ namespace BethanysPieShop.Mobile.Core
         public App()
         {
             InitializeComponent();
+
+            InitializeApp();
+
+            InitializeNavigation();
+        }
+
+        private void InitializeNavigation()
+        {
+            var navigationService = AppContainer.Resolve<INavigationService>();
+        }
+
+        private void InitializeApp()
+        {
+            AppContainer.RegisterDependencies();
 
             MainPage = new AppShell();
         }
