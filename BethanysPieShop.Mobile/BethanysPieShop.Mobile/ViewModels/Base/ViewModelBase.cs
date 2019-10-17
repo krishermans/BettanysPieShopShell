@@ -9,14 +9,14 @@ namespace BethanysPieShop.Mobile.Core.ViewModels.Base
     public class ViewModelBase: INotifyPropertyChanged
     {
         //protected readonly IConnectionService _connectionService;
-        //protected readonly INavigationService _navigationService;
+        protected readonly INavigationService _navigationService;
         //protected readonly IDialogService _dialogService;
 
-        public ViewModelBase(/*IConnectionService connectionService, INavigationService navigationService, 
+        public ViewModelBase(/*IConnectionService connectionService,*/ INavigationService navigationService/*, 
             IDialogService dialogService*/)
         {
             //_connectionService = connectionService;
-            //_navigationService = navigationService;
+            _navigationService = navigationService;
             //_dialogService = dialogService;
         }
 

@@ -20,6 +20,7 @@ namespace BethanysPieShop.Mobile.Core
         private void InitializeNavigation()
         {
             var navigationService = AppContainer.Resolve<INavigationService>();
+            navigationService.InitializeAsync().Wait();
         }
 
         private void InitializeApp()
@@ -27,21 +28,6 @@ namespace BethanysPieShop.Mobile.Core
             AppContainer.RegisterDependencies();
 
             MainPage = new AppShell();
-        }
-
-        protected override void OnStart()
-        {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
         }
     }
 }

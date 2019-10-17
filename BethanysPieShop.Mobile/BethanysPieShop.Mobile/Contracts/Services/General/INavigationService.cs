@@ -8,15 +8,11 @@ namespace BethanysPieShop.Mobile.Core.Contracts.Services.General
     {
         Task InitializeAsync();
 
-        Task NavigateToAsync<TViewModel>() where TViewModel : ViewModelBase;
+        Task NavigateToAsync(string route);
 
-        Task NavigateToAsync<TViewModel>(object parameter) where TViewModel : ViewModelBase;
-
-        Task NavigateToAsync(Type viewModelType);
+        Task NavigateToAsync(string route, object parameter);
 
         Task ClearBackStack();
-
-        Task NavigateToAsync(Type viewModelType, object parameter);
 
         Task NavigateBackAsync();
 

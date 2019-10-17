@@ -16,10 +16,10 @@ namespace BethanysPieShop.Mobile.Core.ViewModels
 
         private ObservableCollection<Pie> _pies;
 
-        public PieCatalogViewModel(/*IConnectionService connectionService,
-            INavigationService navigationService, IDialogService dialogService,*/
+        public PieCatalogViewModel(/*IConnectionService connectionService,*/
+            INavigationService navigationService, /*IDialogService dialogService,*/
             ICatalogDataService catalogDataService)
-            : base(/*connectionService, navigationService, dialogService*/)
+            : base(/*connectionService,*/ navigationService/*, dialogService*/)
         {
             _catalogDataService = catalogDataService;
         }

@@ -28,7 +28,8 @@ namespace BethanysPieShop.Mobile.Core.Bootstrap
             builder.RegisterType<CatalogDataService>().As<ICatalogDataService>();
 
             //services - navigation
-            builder.RegisterType<ShellNavigationService>().As<INavigationService>();
+            builder.RegisterType<ShellNavigationService>().As<INavigationService>().SingleInstance();
+            //builder.RegisterInstance(new ShellNavigationService()).As<INavigationService>();
 
             //General
             builder.RegisterType<GenericRepository>().As<IGenericRepository>();

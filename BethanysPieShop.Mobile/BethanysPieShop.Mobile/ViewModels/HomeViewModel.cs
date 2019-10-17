@@ -18,10 +18,10 @@ namespace BethanysPieShop.Mobile.Core.ViewModels
         private readonly ICatalogDataService _catalogDataService;
         private ObservableCollection<Pie> _piesOfTheWeek;
 
-        public HomeViewModel(/*INavigationService navigationService,
-            IDialogService dialogService,*/
+        public HomeViewModel(INavigationService navigationService,
+            /*IDialogService dialogService,*/
             ICatalogDataService catalogDataService)
-            : base(/*navigationService, dialogService*/)
+            : base(navigationService/*, dialogService*/)
         {
             _catalogDataService = catalogDataService;
 
