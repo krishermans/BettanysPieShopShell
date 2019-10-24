@@ -1,4 +1,5 @@
 ﻿using BethanysPieShop.Mobile.Core.Bootstrap;
+using BethanysPieShop.Mobile.Core.Utility;
 using BethanysPieShop.Mobile.Core.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -14,20 +15,22 @@ namespace BethanysPieShop.Mobile.Core.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PieCatalogView : ContentPage
     {
-        private PieCatalogViewModel _viewModel = null;
+        //private PieCatalogViewModel _viewModel = null;
 
         public PieCatalogView()
         {
             InitializeComponent();
         }
 
-        protected override async void OnAppearing()
-        {
-            base.OnAppearing();
+        //protected override async void OnAppearing()
+        //{
+        //    base.OnAppearing();
 
-            _viewModel = AppContainer.Resolve<PieCatalogViewModel>();
-            await _viewModel.InitializeAsync(null);
-            this.BindingContext = _viewModel;
-        }
+            //_viewModel = AppContainer.Resolve<PieCatalogViewModel>();
+            //await _viewModel.InitializeAsync(null);
+            //this.BindingContext = _viewModel;
+            
+            //ViewModelLocator.SetAutoWireViewModel(this, true);
+        //}
     }
 }

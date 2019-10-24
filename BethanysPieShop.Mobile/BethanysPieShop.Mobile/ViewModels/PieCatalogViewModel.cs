@@ -41,7 +41,7 @@ namespace BethanysPieShop.Mobile.Core.ViewModels
             //_navigationService.NavigateToAsync<PieDetailViewModel>(selectedPie);
         }
 
-        public override async Task InitializeAsync(object data)
+        public override async Task InitializeAsync()
         {
             IsBusy = true;
 

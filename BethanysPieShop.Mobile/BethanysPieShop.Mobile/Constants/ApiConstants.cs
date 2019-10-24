@@ -2,8 +2,8 @@
 {
     public class ApiConstants
     {
-        //public const string BaseApiUrl = "http://10.27.1.37:5000/";
-        public const string BaseApiUrl = "https://bps-pxl.azurewebsites.net/";
+        public const string BaseApiUrl = "http://10.0.2.2:64441/";
+        //public const string BaseApiUrl = "https://bps-pxl.azurewebsites.net/";
         public const string CatalogEndpoint = "api/catalog/pies/";
         public const string PiesOfTheWeekEndpoint = "api/catalog/piesoftheweek/";
         public const string ShoppingCartEndpoint = "api/shoppingcart";

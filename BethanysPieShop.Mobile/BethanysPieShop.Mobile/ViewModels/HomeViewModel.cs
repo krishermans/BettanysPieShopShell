@@ -38,7 +38,7 @@ namespace BethanysPieShop.Mobile.Core.ViewModels
             }
         }
 
-        public override async Task InitializeAsync(object data)
+        public override async Task InitializeAsync()
         {
             PiesOfTheWeek = (await _catalogDataService.GetPiesOfTheWeekAsync()).ToObservableCollection();
         }

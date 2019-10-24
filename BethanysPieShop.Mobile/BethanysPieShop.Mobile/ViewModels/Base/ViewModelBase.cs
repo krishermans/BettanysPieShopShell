@@ -40,7 +40,7 @@ namespace BethanysPieShop.Mobile.Core.ViewModels.Base
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public virtual Task InitializeAsync(object data)
+        public virtual Task InitializeAsync()
         {
             return Task.FromResult(false);
         }

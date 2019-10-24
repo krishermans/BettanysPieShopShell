@@ -30,9 +30,10 @@ namespace BethanysPieShop.Mobile.Core.ViewModels
             }
         }
 
-        public override async Task InitializeAsync(object data)
+        public override async Task InitializeAsync()
         {
-            SelectedPie = (Pie)data;
+            //SelectedPie = (Pie)data;
+            //gaat zo niet: met een Messenger doen vooraleer je navigeert...
         }
 
         private async void OnAddToCart()

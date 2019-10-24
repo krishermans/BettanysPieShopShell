@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:behaviors="clr-namespace:BethanysPieShop.Mobile.Core.Behaviors;assembly=BethanysPieShop.Mobile.Core"
+             xmlns:utility="clr-namespace:BethanysPieShop.Mobile.Core.Utility"
+             utility:ViewModelLocator.AutoWireViewModel="True"
              x:Class="BethanysPieShop.Mobile.Core.Views.HomeView"
              Title="Welcome" BackgroundImage="darktexture.jpg" 
              x:Name="HomeViewPage">

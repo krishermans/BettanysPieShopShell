@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BethanysPieShop.Mobile.Core.Views.PieCatalogView"
              xmlns:behaviors="clr-namespace:BethanysPieShop.Mobile.Core.Behaviors;assembly=BethanysPieShop.Mobile.Core"
+             xmlns:utility="clr-namespace:BethanysPieShop.Mobile.Core.Utility"
+             utility:ViewModelLocator.AutoWireViewModel="True"
              BackgroundImage="darktexture.jpg" 
              Title="All Pies"
              x:Name="PieCatalogViewPage"
