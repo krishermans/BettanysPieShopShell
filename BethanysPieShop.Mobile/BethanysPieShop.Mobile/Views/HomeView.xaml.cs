@@ -14,20 +14,9 @@ namespace BethanysPieShop.Mobile.Core.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomeView : ContentPage
     {
-        //private HomeViewModel _viewModel = null;
-        
         public HomeView()
         {
             InitializeComponent();
         }
-
-        //protected override async void OnAppearing()
-        //{
-        //    base.OnAppearing();
-
-        //    _viewModel = AppContainer.Resolve<HomeViewModel>();
-        //    await _viewModel.InitializeAsync();
-        //    this.BindingContext = _viewModel;
-        //}
     }
 }

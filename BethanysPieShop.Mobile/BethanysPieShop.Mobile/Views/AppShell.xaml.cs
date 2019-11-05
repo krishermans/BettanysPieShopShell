@@ -1,9 +1,8 @@
 ﻿
 using BethanysPieShop.Mobile.Core.Constants;
-using BethanysPieShop.Mobile.Core.Views;
 using Xamarin.Forms;
 
-namespace BethanysPieShop.Mobile.Core
+namespace BethanysPieShop.Mobile.Core.Views
 {
     public partial class AppShell : Shell
     {

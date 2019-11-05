@@ -1,5 +1,6 @@
 ﻿using BethanysPieShop.Mobile.Core.Bootstrap;
 using BethanysPieShop.Mobile.Core.Contracts.Services.General;
+using BethanysPieShop.Mobile.Core.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

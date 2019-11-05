@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       mc:Ignorable="d"
+       xmlns:utility="clr-namespace:BethanysPieShop.Mobile.Core.Utility"
+       utility:ViewModelLocator.AutoWireViewModel="True"
+       x:Class="BethanysPieShop.Mobile.Core.Views.AppShell">
+    <Shell.FlyoutHeader>
+        <Grid>
+            <Image Source="carousel1.jpg" Aspect="AspectFill"></Image>
+            <Grid BackgroundColor="#444444" Opacity="0.8"/>
+            <Label Text="{Binding WelcomeText}" Style="{StaticResource MenuLabelStyle}"/>
+        </Grid>
+    </Shell.FlyoutHeader>
+</Shell>

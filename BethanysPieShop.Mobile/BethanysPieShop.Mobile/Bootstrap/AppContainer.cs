@@ -21,6 +21,7 @@ namespace BethanysPieShop.Mobile.Core.Bootstrap
             var builder = new ContainerBuilder();
 
             //ViewModels
+            builder.RegisterType<AppShellModel>();
             builder.RegisterType<HomeViewModel>();
             builder.RegisterType<PieCatalogViewModel>();
 
