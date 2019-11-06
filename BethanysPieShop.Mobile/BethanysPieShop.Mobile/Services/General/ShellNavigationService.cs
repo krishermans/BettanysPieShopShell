@@ -49,7 +49,11 @@ namespace BethanysPieShop.Mobile.Core.Services.General
         public Task NavigateToAsync(string route, object parameter)
         {
             // find page type for route
-
+            // TODO: 
+            // look up the viewmodel based on the route
+            // send it the parameter using the messenger
+            // navigate
+            // Problem? does the IoC container retrieves the same VM for the V and the Messenger?
             return _currentShell.GoToAsync(route);
         }
 

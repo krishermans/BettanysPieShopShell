@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using BethanysPieShop.Mobile.Core.Constants;
 using BethanysPieShop.Mobile.Core.Contracts.Services.General;
@@ -15,7 +16,14 @@ namespace BethanysPieShop.Mobile.Core.ViewModels
         public PieDetailViewModel(/*IConnectionService connectionService,*/
             INavigationService navigationService/*, IDialogService dialogService*/)
             : base(/*connectionService, */navigationService/*, dialogService*/)
-        { }
+        {
+            MessagingCenter.Subscribe<PieCatalogViewModel, Pie>(this, NavigationRouteConstants.PieDetailRoute, OnPieReceived);
+        }
+
+        private void OnPieReceived(PieCatalogViewModel viewModel, Pie pie)
+        {
+            SelectedPie = pie;
+        }
 
         public ICommand AddToCartCommand => new Command(OnAddToCart);
         public ICommand ReadDescriptionCommand => new Command(OnReadDescription);

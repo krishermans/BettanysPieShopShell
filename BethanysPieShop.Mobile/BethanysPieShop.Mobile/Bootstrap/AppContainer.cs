@@ -24,6 +24,7 @@ namespace BethanysPieShop.Mobile.Core.Bootstrap
             builder.RegisterType<AppShellModel>();
             builder.RegisterType<HomeViewModel>();
             builder.RegisterType<PieCatalogViewModel>();
+            builder.RegisterType<PieDetailViewModel>();
 
             //services - data
             builder.RegisterType<CatalogDataService>().As<ICatalogDataService>();

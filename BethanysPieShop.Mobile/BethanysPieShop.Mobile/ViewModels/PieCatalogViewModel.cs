@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using BethanysPieShop.Mobile.Core.Constants;
 using BethanysPieShop.Mobile.Core.Contracts.Services.Data;
 using BethanysPieShop.Mobile.Core.Contracts.Services.General;
 using BethanysPieShop.Mobile.Core.Extensions;
@@ -38,7 +39,11 @@ namespace BethanysPieShop.Mobile.Core.ViewModels
 
         private void OnPieTapped(Pie selectedPie)
         {
-            //_navigationService.NavigateToAsync<PieDetailViewModel>(selectedPie);
+            // Order is important!
+            // First navigate, this makes sure the viewmodel exists and is subscribed to the messenger
+            _navigationService.NavigateToAsync(NavigationRouteConstants.PieDetailRoute);
+            // now send the message to any interested viewmodel
+            MessagingCenter.Instance.Send<PieCatalogViewModel, Pie>(this, NavigationRouteConstants.PieDetailRoute, selectedPie);
         }
 
         public override async Task InitializeAsync()
